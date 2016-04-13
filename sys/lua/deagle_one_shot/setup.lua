@@ -8,7 +8,7 @@ parse('mp_hud 73');
 parse('mp_radar 0');
 
 --> HOOKS
-local hooks = {"join", "spawn", "buy", "drop", "startround", "kill"};
+local hooks = {"join", "spawn", "buy", "drop", "startround", "kill", "say"};
 
 for _, hook in pairs(hooks) do
 	addhook(hook, "dos.hook."..hook);

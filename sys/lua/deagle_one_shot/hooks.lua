@@ -111,3 +111,16 @@ function dos.hook.kill(killer, victim, weapon, x, y)
 			' KILLS <<@C');
 	end
 end
+
+--[[-------------------------------------------------
+	say                                               
+-------------------------------------------------]]--
+function dos.hook.say(id, message)
+	if (message == "!rs") then
+		parse('setdeaths '..id..' 0');
+		parse('setscore '..id..' 0');
+		msg(string.char(169).."255255255"..player(id, "name")..
+			" has reset his score !");
+		msg(string.char(169).."255255255Command: !rs");
+	end
+end
