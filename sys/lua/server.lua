@@ -1,0 +1,1 @@
+dofile('sys/lua/deagle_one_shot/deagle_one_shot.lua');
